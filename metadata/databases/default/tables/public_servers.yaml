@@ -1,0 +1,3 @@
+table:
+  name: servers
+  schema: public
