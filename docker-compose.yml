@@ -3,8 +3,6 @@ services:
   graphql-engine:
     container_name: discord_clone_hasura
     image: hasura/graphql-engine:v2.16.1
-    volumes:
-      - ./data:/var/lib/postgresql/data
     ports:
       - "8060:8080"
     restart: always

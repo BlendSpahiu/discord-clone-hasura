@@ -1,5 +1,5 @@
 {
-  "name": "go-hasura",
+  "name": "discord-clone-hasura",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,6 +10,6 @@
     "dev:migrate-apply": "hasura migrate apply --database-name default --envfile=.env.dev",
     "dev:metadata-apply": "hasura metadata apply --envfile=.env.dev",
     "dev:deploy": "npm run dev:migrate-apply && npm run dev:metadata-apply",
-    "migrate": "./scripts/hasura-update.sh"
+    "migrate": "cd scripts/ && bash hasura-update.sh"
   }
 }
