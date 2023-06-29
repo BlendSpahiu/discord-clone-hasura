@@ -1,0 +1,26 @@
+actions:
+  - name: login
+    definition:
+      kind: synchronous
+      handler: http://host.docker.internal:5000/login
+    permissions:
+      - role: user
+      - role: anonymous
+    comment: login
+  - name: register
+    definition:
+      kind: synchronous
+      handler: http://host.docker.internal:5000/register
+    permissions:
+      - role: user
+      - role: anonymous
+    comment: register
+custom_types:
+  enums: []
+  input_objects:
+    - name: RegisterInput
+    - name: LoginInput
+  objects:
+    - name: RegisterOutput
+    - name: LoginOutput
+  scalars: []

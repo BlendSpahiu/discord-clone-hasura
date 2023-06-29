@@ -8,7 +8,7 @@ services:
     restart: always
     environment:
       HASURA_GRAPHQL_DEV_MODE: "true"
-      HASURA_GRAPHQL_JWT_SECRET: '{"type":"HS256", "key": "WpjxaTVar48sWETdg5f3DSxucJv2NTYK"}'
+      HASURA_GRAPHQL_JWT_SECRET: '{"type":"HS256", "key": "cGpDnQgwKS4qdjTP60AClmJx9XktM7WZ"}'
       HASURA_GRAPHQL_ADMIN_SECRET: ${HASURA_GRAPHQL_ADMIN_SECRET}
       HASURA_GRAPHQL_DATABASE_URL: ${HASURA_GRAPHQL_DATABASE_URL}
       HASURA_GRAPHQL_ENABLE_CONSOLE: "true"

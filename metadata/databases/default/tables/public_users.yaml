@@ -1,0 +1,75 @@
+table:
+  name: users
+  schema: public
+insert_permissions:
+  - role: user
+    permission:
+      check:
+        id:
+          _eq: x-hasura-user-id
+      columns:
+        - created_at
+        - date_of_birth
+        - display_name
+        - email
+        - friends
+        - id
+        - is_disabled
+        - messages
+        - password
+        - phone_number
+        - profile_picture
+        - status
+        - tag
+        - updated_at
+        - username
+select_permissions:
+  - role: user
+    permission:
+      columns:
+        - created_at
+        - date_of_birth
+        - display_name
+        - email
+        - friends
+        - id
+        - is_disabled
+        - messages
+        - phone_number
+        - profile_picture
+        - status
+        - tag
+        - updated_at
+        - username
+      filter:
+        id:
+          _eq: x-hasura-user-id
+update_permissions:
+  - role: user
+    permission:
+      columns:
+        - is_disabled
+        - id
+        - tag
+        - friends
+        - messages
+        - date_of_birth
+        - display_name
+        - email
+        - password
+        - phone_number
+        - profile_picture
+        - status
+        - username
+        - created_at
+        - updated_at
+      filter:
+        id:
+          _eq: x-hasura-user-id
+      check: null
+delete_permissions:
+  - role: user
+    permission:
+      filter:
+        id:
+          _eq: x-hasura-user-id
